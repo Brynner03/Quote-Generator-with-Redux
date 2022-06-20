@@ -31,7 +31,7 @@ const QuoteForm = (props) => {
 
   return (
   <Fragment>
-    <Prompt when={isEntering} message={(location) => 'Are you sure you want to leave? All your entered data will not be saved.'} />
+    <Prompt when={isEntering} message={() => 'Are you sure you want to leave? All your entered data will not be saved.'} />
     <Card>
       <form onFocus={formFocused} className={classes.form} onSubmit={submitFormHandler}>
         {props.isLoading && (

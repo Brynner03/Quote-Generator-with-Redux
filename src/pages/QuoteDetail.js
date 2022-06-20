@@ -25,7 +25,7 @@ function QuoteDetail() {
       <HighlightedQuote text={quote.text} author={quote.author} />
       <Route path={match.path} exact>   
       <div className='centered'>
-        <Link className='btn--flat' to={`/quotes/${params.quoteId}/comments`}>Load Comments</Link>
+        <Link className='btn--flat' to={`${match.url}/comments`}>Load Comments</Link>
       </div>
       </Route>
       <Route path={`${match.path}/comments`}>
